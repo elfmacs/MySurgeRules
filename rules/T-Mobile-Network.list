@@ -1,0 +1,30 @@
+# T-Mobile US network / IMS / Wi-Fi Calling rules for Surge
+#
+# T-Mobile Wi-Fi Calling firewall guidance currently lists:
+# - 208.54.0.0/16 for IKE/IPsec/SIP (UDP 500, UDP 4500, TCP/UDP 5061)
+# - 66.94.0.0/19 for handset authentication / visual voicemail (TCP 443, TCP 993)
+# - crl.t-mobile.com / 206.29.177.36 for certificate-revocation checks
+#
+# This file intentionally does NOT enable the much broader AS21928 catch-all.
+# Optional full-AS mode, if explicitly desired:
+# IP-ASN,21928,no-resolve
+
+# T-Mobile US ePDG / Wi-Fi Calling discovery - MNC 260
+DOMAIN,epdg.epc.mnc260.mcc310.pub.3gppnetwork.org
+DOMAIN,epdg.epc.geo.mnc260.mcc310.pub.3gppnetwork.org
+DOMAIN,ss.epdg.epc.mnc260.mcc310.pub.3gppnetwork.org
+DOMAIN,ss.epdg.epc.geo.mnc260.mcc310.pub.3gppnetwork.org
+
+# T-Mobile US ePDG / Wi-Fi Calling discovery - MNC 240
+DOMAIN,epdg.epc.mnc240.mcc310.pub.3gppnetwork.org
+DOMAIN,epdg.epc.geo.mnc240.mcc310.pub.3gppnetwork.org
+DOMAIN,ss.epdg.epc.mnc240.mcc310.pub.3gppnetwork.org
+DOMAIN,ss.epdg.epc.geo.mnc240.mcc310.pub.3gppnetwork.org
+
+# Certificate-revocation endpoint used by WFC/DIGITS
+DOMAIN,crl.t-mobile.com
+
+# T-Mobile documented Wi-Fi Calling destination ranges
+IP-CIDR,208.54.0.0/16,no-resolve
+IP-CIDR,66.94.0.0/19,no-resolve
+IP-CIDR,206.29.177.36/32,no-resolve
