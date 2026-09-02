@@ -1,0 +1,32 @@
+# T-Mobile web/application domain rules for Surge
+# Scope: T-Mobile US websites, customer/account surfaces, T-Life-related web endpoints,
+#       T-Mobile MONEY, Metro by T-Mobile, legacy T-Mobile domains, and first-party CDN.
+# Excludes: cellular carrier IP ranges, IMS/ePDG, Wi-Fi Calling, and generic third-party CDNs.
+
+# Core T-Mobile US / account / prepaid / business / community / fiber
+DOMAIN-SUFFIX,t-mobile.com
+DOMAIN-SUFFIX,tmobile.com
+
+# T-Mobile short links
+DOMAIN-SUFFIX,t-mo.co
+
+# First-party/brand CDN hosted on Adobe Scene7
+DOMAIN,t-mobile.scene7.com
+
+# T-Mobile MONEY
+DOMAIN-SUFFIX,t-mobilemoney.com
+DOMAIN-SUFFIX,tmobilemoney.com
+
+# Metro by T-Mobile
+DOMAIN-SUFFIX,metrobyt-mobile.com
+
+# T-Mobile Tuesdays legacy web domain
+DOMAIN-SUFFIX,t-mobiletuesdays.com
+
+# Employee benefits site
+DOMAIN-SUFFIX,t-mobilebenefits.com
+
+# Legacy / compatibility domains
+DOMAIN-SUFFIX,t-mobile.net
+DOMAIN-SUFFIX,tmobile.net
+DOMAIN-SUFFIX,t-mobile.us
